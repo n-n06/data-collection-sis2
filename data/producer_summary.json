@@ -1,0 +1,8 @@
+{
+  "run_id": "4a7052b5-327e-446a-ad4b-9c96dc590270",
+  "topic": "pink-floyd-physical-releases",
+  "bootstrap_servers": "localhost:9092",
+  "source_records": 250,
+  "deliberate_invalid_records": 3,
+  "published_messages": 253
+}

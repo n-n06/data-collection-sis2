@@ -1,0 +1,23 @@
+{
+  "input_valid_records": 250,
+  "duplicates_removed": 0,
+  "records_after_cleaning": 250,
+  "missing_optional_values_before_fill": {
+    "country_code": 1,
+    "barcode": 250,
+    "invalid_reason": 250
+  },
+  "multi_condition_filter_records": 0,
+  "groupby_rows": 4,
+  "pivot_shape": [
+    2,
+    4
+  ],
+  "numpy_operations": [
+    "release age",
+    "decade",
+    "era selection",
+    "multi-disc flag",
+    "track-count z-score"
+  ]
+}

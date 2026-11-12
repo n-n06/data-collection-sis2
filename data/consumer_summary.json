@@ -1,0 +1,10 @@
+{
+  "run_id": "4a7052b5-327e-446a-ad4b-9c96dc590270",
+  "topic": "pink-floyd-physical-releases",
+  "bootstrap_servers": "localhost:9092",
+  "expected_messages": 253,
+  "consumed_messages": 253,
+  "skipped_messages_from_other_runs": 0,
+  "termination_condition": "consumed == expected",
+  "output": "data/consumed_messages.jsonl"
+}

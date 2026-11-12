@@ -1,0 +1,7 @@
+schema_context,column,check,check_number,failure_case,index
+Column,release_id,str_matches('^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$'),0,not-a-musicbrainz-uuid,250
+Column,title,"str_length(1, 300)",0,,250
+Column,status,"isin(['Official', 'Promotion', 'Bootleg', 'Pseudo-Release', 'Withdrawn', 'Unknown'])",0,Mystery,252
+Column,format_category,"isin(['8-Track', 'CD', 'Cassette', 'DVD/Blu-ray', 'MiniDisc', 'Other physical', 'Vinyl'])",0,Digital,252
+Column,track_count,"in_range(1, 500)",0,0,251
+Column,release_year,"in_range(1960, 2026)",0,2099,251

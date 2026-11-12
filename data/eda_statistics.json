@@ -1,0 +1,43 @@
+{
+  "dimensions": [
+    250,
+    30
+  ],
+  "release_year_min": 1965,
+  "release_year_max": 1979,
+  "track_count_mean": 6.85,
+  "track_count_median": 5.0,
+  "track_count_min": 2,
+  "track_count_max": 36,
+  "unique_countries_or_areas": 32,
+  "unique_release_groups": 44,
+  "format_counts": {
+    "Vinyl": 238,
+    "Cassette": 8,
+    "8-Track": 3,
+    "Other physical": 1
+  },
+  "top_countries": {
+    "US": 48,
+    "GB": 45,
+    "DE": 27,
+    "JP": 26,
+    "FR": 19,
+    "IT": 14,
+    "NL": 12,
+    "CA": 8,
+    "ES": 8,
+    "AU": 7,
+    "NZ": 5,
+    "SE": 3
+  },
+  "peak_decade": 1970,
+  "peak_decade_count": 158,
+  "multi_disc_releases": 19,
+  "figures": [
+    "01_format_distribution.png",
+    "02_releases_by_decade.png",
+    "03_top_countries.png",
+    "04_decade_format_heatmap.png"
+  ]
+}

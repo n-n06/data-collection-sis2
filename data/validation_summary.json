@@ -1,0 +1,9 @@
+{
+  "input_records": 253,
+  "valid_records": 250,
+  "invalid_records": 3,
+  "pandera_failure_cases": 6,
+  "deliberate_invalid_detected": 3,
+  "handling_strategy": "quarantine invalid rows; exclude them from cleaning and database loading",
+  "schema_rule_count": 14
+}

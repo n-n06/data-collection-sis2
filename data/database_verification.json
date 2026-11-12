@@ -1,0 +1,83 @@
+{
+  "processed_records": 250,
+  "inserted_first_load": 250,
+  "stored_after_first_load": 250,
+  "inserted_second_load": 0,
+  "stored_after_second_load": 250,
+  "idempotency_passed": true,
+  "stored_rows": 250,
+  "distinct_release_ids": 250,
+  "duplicate_primary_keys": 0,
+  "counts_by_format": [
+    {
+      "format_category": "Vinyl",
+      "release_count": 238
+    },
+    {
+      "format_category": "Cassette",
+      "release_count": 8
+    },
+    {
+      "format_category": "8-Track",
+      "release_count": 3
+    },
+    {
+      "format_category": "Other physical",
+      "release_count": 1
+    }
+  ],
+  "counts_by_decade": [
+    {
+      "release_decade": 1960,
+      "release_count": 92,
+      "average_tracks": 5.14
+    },
+    {
+      "release_decade": 1970,
+      "release_count": 158,
+      "average_tracks": 7.85
+    }
+  ],
+  "sample_rows": [
+    {
+      "release_id": "da0f5cee-71a4-4283-b20c-ffa88af0798b",
+      "title": "Lucy Leave",
+      "release_date": "1965",
+      "format_category": "Other physical",
+      "country_code": "GB",
+      "track_count": 2
+    },
+    {
+      "release_id": "10d18dcb-b6b5-455d-b6d7-152355f32621",
+      "title": "See Emily Play",
+      "release_date": "1967",
+      "format_category": "Vinyl",
+      "country_code": "US",
+      "track_count": 2
+    },
+    {
+      "release_id": "1875aa24-168b-3815-9fc6-b6930ea36865",
+      "title": "The Piper at the Gates of Dawn",
+      "release_date": "1967",
+      "format_category": "Vinyl",
+      "country_code": "DE",
+      "track_count": 11
+    },
+    {
+      "release_id": "2e20b2b1-fad2-40a2-8a60-5b200f5ec900",
+      "title": "The Piper at the Gates of Dawn",
+      "release_date": "1967",
+      "format_category": "Vinyl",
+      "country_code": "JP",
+      "track_count": 12
+    },
+    {
+      "release_id": "2e99c1a0-940e-41ee-bbbb-ab4360de76d4",
+      "title": "The Piper at the Gates of Dawn",
+      "release_date": "1967",
+      "format_category": "Vinyl",
+      "country_code": "US",
+      "track_count": 9
+    }
+  ]
+}
