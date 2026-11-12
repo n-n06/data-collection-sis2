@@ -1,10 +1,10 @@
 # Data Collection and Preparation SIS2: Pink Floyd Physical Releases - Kafka and Pandera Pipeline
 > By Nursultan Zhantuar
-**Course:** Data Collection & Preparation  
+
+
 **Topic:** Physical Pink Floyd release editions from the public MusicBrainz API  
 
 
-> Before GitHub submission, replace the bracketed group placeholder here and on the report title/contributions pages. The instructor-notification template is in `docs/instructor_notification.md` (required deadline: 01.11.2026).
 
 ## 1. Project overview
 
@@ -248,29 +248,7 @@ Generated files:
 
 The packaged 250-row run spans 1973-2025. CD is the most frequent format (138), the 1990s are the peak decade (87), and 36 country/area codes are represented.
 
-## 12. End-to-end success verification
-
-```bash
-cat data/pipeline_summary.json
-```
-
-Expected snapshot-run counts:
-
-| Stage | Count |
-|---|---:|
-| Source records collected | 250 |
-| Kafka messages published | 253 |
-| Kafka messages consumed | 253 |
-| Valid records | 250 |
-| Invalid test records | 3 |
-| Records after cleaning | 250 |
-| SQLite rows | 250 |
-| Rows inserted by second load | 0 |
-| Figures generated | 4 |
-
-The three-message difference between collection and Kafka counts is intentional validation testing. All checks in `pipeline_summary.json` must be `true`.
-
-## 13. Tests
+## 12. Tests
 
 ```bash
 pytest
@@ -278,7 +256,7 @@ pytest
 
 The tests cover format classification, deliberate invalid records, cleaning outputs, schema structure, and SQLite idempotency.
 
-## 14. Stop and reset Kafka
+## 13. Stop and reset Kafka
 
 ```bash
 docker compose down
@@ -290,22 +268,3 @@ To delete the broker volume/state and rebuild from a clean Kafka instance:
 docker compose down -v
 docker compose up -d
 ```
-
-## 15. Troubleshooting
-
-- **NoBrokersAvailable:** wait for `docker compose ps` to show healthy; verify port 9092 is free.
-- **Consumer timeout:** start the consumer before the producer and use identical run IDs and expected count.
-- **MusicBrainz 503/429:** wait and retry; the client already performs exponential retries and rate limiting.
-- **Fewer than 250 dated physical records:** rerun later or lower `--target`, but never below 200 for submission.
-- **Stale topic data:** messages are scoped by `run_id`; the consumer ignores other runs.
-- **Port conflict:** set `KAFKA_BOOTSTRAP_SERVERS` consistently and update the Compose port mapping if needed.
-- **Windows shell syntax:** use the PowerShell environment-variable forms shown above.
-
-## 16. Submission checklist
-
-- Replace group placeholders in README, report, and instructor notification.
-- Run `python main.py full --source api --target 250 --inject-invalid 3` with Docker Kafka.
-- Confirm every check in `data/pipeline_summary.json` is true.
-- Run SQL verification and `pytest`.
-- Commit source, generated figures, SQLite database, data dictionary, and `report/project_report.pdf`.
-- Push the same tested version to GitHub and rehearse the 10-minute defense.
