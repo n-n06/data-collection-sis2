@@ -50,7 +50,7 @@ The dependencies are in `requirements.txt`. Due to some problems I had with req 
 Clone the repo and crate a virtual python environment
 ```bash
 git clone https://github.com/n-n06/data-collection-sis2
-cd pink-floyd-kafka-pandera
+cd data-collection-sis2
 python -m venv .venv
 ```
 
